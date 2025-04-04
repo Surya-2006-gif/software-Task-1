@@ -1,5 +1,6 @@
 import numpy as np
-
+#this dictionary hold keys and values neccesary for our conversion
+#this convention is found from internet and chatgpt
 morse_code_dict = {
     '._': 'A', '_...': 'B', '_._.': 'C', '_..': 'D', '.': 'E',
     '.._.': 'F', '__.': 'G', '....': 'H', '..': 'I', '.___': 'J',
@@ -24,9 +25,9 @@ def morse_code_converter(morse_code):
     global morse_code_dict
     decrypted_words = []
 
-    morse_list = morse_code.split("   ")  # Split words by three spaces
+    morse_list = morse_code.split("   ")  # Splits words by three spaces,three space corresponds to seperate to different words
 
-    for morse_chunk in morse_list:
+    for morse_chunk in morse_list:   #processing one word at a time by combining each character given my the morse code
         decrypted_words.append(''.join(morse_code_dict.get(value) for value in morse_chunk.split(' ')))
 
     return decrypted_words
@@ -34,9 +35,9 @@ def morse_code_converter(morse_code):
 morse_code = input("Enter the morse code: ")
 
 morse_code_array = np.array(list(morse_code))
-
+#checking whether any other irrelavant character is present in the morse code
 if np.all(np.isin(np.unique(morse_code_array), ['.', '_', ' '])):
     decrypted_list = morse_code_converter(morse_code)
-    print(f"The decrypted message is {' '.join(decrypted_list)}")
+    print(f"The decrypted message is {' '.join(decrypted_list)}") #joining the words with spaces
 else:
     print("Invalid Morse Code input.")
