@@ -1,6 +1,6 @@
 import numpy as np
 #this dictionary hold keys and values neccesary for our conversion
-#this convention is found from internet and chatgpt
+#this convention is found from internet 
 morse_code_dict = {
     '._': 'A', '_...': 'B', '_._.': 'C', '_..': 'D', '.': 'E',
     '.._.': 'F', '__.': 'G', '....': 'H', '..': 'I', '.___': 'J',

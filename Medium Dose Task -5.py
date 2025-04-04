@@ -1,4 +1,4 @@
-# Eulers representation to quaternion
+# conversion of Eulers representation to quaternion
 import numpy as np
 
 
