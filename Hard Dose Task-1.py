@@ -36,16 +36,6 @@ def shortest_path(area_map, map_size, dest_x, dest_y, i, j, path_count):
     path.pop() 
 
 
-
-
-
-
-
-
-
-
-
-
 # reading the obstacles using file_object
 file_path = r"c:\Users\surya\Downloads\obstacles.txt"
 with open(file_path, 'r') as f_obj:
